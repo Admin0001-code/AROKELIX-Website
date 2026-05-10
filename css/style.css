@@ -1,0 +1,171 @@
+/* ── RESET ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── AROKELIX BRAND COLOURS ── */
+:root {
+    --void:    #04050A;
+    --deep:    #080B14;
+    --panel:   #101525;
+    --gold:    #C9940A;
+    --gold2:   #E5AB18;
+    --ivory:   #ECEADF;
+    --muted:   #484E62;
+    --light-bg: #F5F2EC;
+    --border-d: rgba(255,255,255,0.06);
+}
+
+/* ── BASE ── */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--void);
+    color: var(--ivory);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ── GOLD ACCENT ── */
+.gold {
+    color: var(--gold2);
+}
+
+/* ── NAVIGATION ── */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    background: rgba(4,5,10,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,148,10,0.1);
+}
+
+.nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.25em;
+    color: var(--ivory);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--ivory);
+}
+
+.nav-cta {
+    background: var(--gold) !important;
+    color: var(--void) !important;
+    padding: 10px 24px;
+    font-weight: 600 !important;
+}
+
+/* ── HERO ── */
+.hero {
+    min-height: 100vh;
+    background: var(--void);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 48px 80px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.55em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 14vw, 120px);
+    letter-spacing: 0.15em;
+    color: var(--ivory);
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(18px, 2.5vw, 24px);
+    color: var(--muted);
+    margin-bottom: 48px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--void);
+    padding: 16px 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--gold2);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--ivory);
+    padding: 16px 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
