@@ -274,3 +274,507 @@ nav {
     line-height: 1.75;
 }
 
+/* ── STATS BAR ── */
+.stats {
+    background: var(--deep);
+    padding: 100px 48px;
+    border-top: 1px solid var(--border-d);
+    border-bottom: 1px solid var(--border-d);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stat-block {
+    padding: 40px 32px;
+    text-align: center;
+    border: 1px solid var(--border-d);
+    transition: background 0.3s;
+}
+
+.stat-block:hover {
+    background: rgba(201,148,10,0.04);
+}
+
+.stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 60px);
+    color: var(--gold2);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* ── FOOTER ── */
+footer {
+    background: var(--void);
+    border-top: 1px solid rgba(201,148,10,0.1);
+    padding: 60px 48px 40px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 60px;
+}
+
+.footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.25em;
+    color: var(--ivory);
+    margin-bottom: 16px;
+}
+
+.footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-verse {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    opacity: 0.5;
+}
+
+.footer-col h4 {
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.footer-col a {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--ivory);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-d);
+    padding-top: 28px;
+}
+
+.footer-copy {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 24px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero {
+        padding: 120px 24px 80px;
+    }
+    .services {
+        padding: 80px 24px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+/* ── NAV SCROLLED STATE ── */
+nav.scrolled {
+    height: 60px;
+    background: rgba(4,5,10,0.98);
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── NAV SCROLLED ── */
+nav.scrolled {
+    height: 60px;
+    background: rgba(4,5,10,0.98);
+}
+
+/* ── MOBILE MENU ── */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--void);
+    z-index: 98;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.mobile-menu a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.15em;
+    color: var(--ivory);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: var(--gold2);
+}
+
+/* ── HAMBURGER ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--ivory);
+    transition: all 0.3s;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* ── PAGE HERO ── */
+.page-hero {
+    background: var(--void);
+    padding: 160px 48px 100px;
+    max-width: 780px;
+}
+
+.page-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 88px);
+    color: var(--ivory);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.page-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+/* ── FOUNDER ── */
+.founder {
+    background: var(--light-bg);
+    padding: 100px 48px;
+}
+
+.founder-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    letter-spacing: 0.06em;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+}
+
+.founder-title {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted-light);
+    margin-bottom: 24px;
+}
+
+.founder-bio {
+    font-size: 15px;
+    color: var(--muted-light);
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 24px;
+}
+
+.founder-verse {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--dark-text);
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+    line-height: 1.65;
+    max-width: 560px;
+}
+
+/* ── BIBLICAL ── */
+.biblical {
+    background: var(--deep);
+    padding: 100px 48px;
+    text-align: center;
+}
+
+.biblical-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 56px;
+}
+
+.biblical-block {
+    padding: 40px 28px;
+    border: 1px solid var(--border-d);
+    transition: background 0.3s;
+}
+
+.biblical-block:hover {
+    background: rgba(201,148,10,0.04);
+}
+
+.bib-part {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: var(--gold2);
+    margin-bottom: 10px;
+}
+
+.bib-root {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+
+.bib-meaning {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+/* ── CONTACT PAGE ── */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.contact-left {
+    background: var(--void);
+    padding: 140px 60px 80px;
+}
+
+.contact-right {
+    background: var(--light-bg);
+    padding: 140px 60px 80px;
+}
+
+.form-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.08em;
+    color: var(--dark-text);
+    margin-bottom: 36px;
+}
+
+.contact-info {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.info-block {
+    padding: 20px 24px;
+    border: 1px solid var(--border-d);
+    transition: background 0.3s;
+}
+
+.info-block:hover {
+    background: rgba(201,148,10,0.04);
+}
+
+.info-label {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.info-value {
+    font-size: 14px;
+    color: var(--ivory);
+}
+
+.info-value a {
+    color: var(--ivory);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-value a:hover {
+    color: var(--gold);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+}
+
+.form-input {
+    background: white;
+    border: 1px solid var(--border-l);
+    padding: 14px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--dark-text);
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-input:focus {
+    border-color: var(--gold);
+}
+
+/* ── WHATSAPP BUTTON ── */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+    .contact-left,
+    .contact-right {
+        padding: 120px 24px 60px;
+    }
+    .biblical-grid {
+        grid-template-columns: 1fr;
+    }
+}
