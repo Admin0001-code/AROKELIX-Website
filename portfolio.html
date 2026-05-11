@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — AROKELIX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <nav id="nav">
+        <a href="index.html" class="nav-logo">
+            AROKE<span class="gold">L</span>IX
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html" class="nav-cta">Get In Touch</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <p class="hero-eyebrow">Selected Work</p>
+        <h1 class="page-title">Built To Last.</h1>
+        <p class="page-intro">A curated selection of brands, products, and campaigns crafted for clients across Africa and the world.</p>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects(this,'all')">All Work</button>
+        <button class="filter-btn" onclick="filterProjects(this,'brand')">Branding</button>
+        <button class="filter-btn" onclick="filterProjects(this,'web')">Web</button>
+        <button class="filter-btn" onclick="filterProjects(this,'social')">Social Media</button>
+        <button class="filter-btn" onclick="filterProjects(this,'marketing')">Marketing</button>
+    </div>
+
+    <!-- PORTFOLIO GRID -->
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+
+            <div class="port-item" data-cat="brand">
+                <div class="port-bg port-bg-1">
+                    <div class="port-overlay"></div>
+                    <div class="port-hover">
+                        <div class="port-hover-title">Brand Identity</div>
+                        <div class="port-hover-link">View Project →</div>
+                    </div>
+                    <div class="port-info">
+                        <div class="port-cat">Branding · Identity</div>
+                        <div class="port-name">Corporate Brand System</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port-item" data-cat="web">
+                <div class="port-bg port-bg-2">
+                    <div class="port-overlay"></div>
+                    <div class="port-hover">
+                        <div class="port-hover-title">Web Platform</div>
+                        <div class="port-hover-link">View Project →</div>
+                    </div>
+                    <div class="port-info">
+                        <div class="port-cat">Development</div>
+                        <div class="port-name">E-Commerce Website</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port-item" data-cat="social">
+                <div class="port-bg port-bg-3">
+                    <div class="port-overlay"></div>
+                    <div class="port-hover">
+                        <div class="port-hover-title">Social Campaign</div>
+                        <div class="port-hover-link">View Project →</div>
+                    </div>
+                    <div class="port-info">
+                        <div class="port-cat">Social Media</div>
+                        <div class="port-name">Restaurant Campaign</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port-item" data-cat="brand">
+                <div class="port-bg port-bg-4">
+                    <div class="port-overlay"></div>
+                    <div class="port-hover">
+                        <div class="port-hover-title">Brand Identity</div>
+                        <div class="port-hover-link">View Project →</div>
+                    </div>
+                    <div class="port-info">
+                        <div class="port-cat">Branding</div>
+                        <div class="port-name">Tech Startup Identity</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port-item" data-cat="marketing">
+                <div class="port-bg port-bg-5">
+                    <div class="port-overlay"></div>
+                    <div class="port-hover">
+                        <div class="port-hover-title">Marketing Campaign</div>
+                        <div class="port-hover-link">View Project →</div>
+                    </div>
+                    <div class="port-info">
+                        <div class="port-cat">Marketing</div>
+                        <div class="port-name">Growth Campaign 340% ROI</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port-item" data-cat="web">
+                <div class="port-bg port-bg-6">
+                    <div class="port-overlay"></div>
+                    <div class="port-hover">
+                        <div class="port-hover-title">Web Design</div>
+                        <div class="port-hover-link">View Project →</div>
+                    </div>
+                    <div class="port-info">
+                        <div class="port-cat">Development</div>
+                        <div class="port-name">Corporate Website Redesign</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="testi-header">
+            <p class="section-eyebrow">Client Voices</p>
+            <h2 class="section-title" style="color:var(--ivory);">What Clients Say</h2>
+        </div>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"AROKELIX didn't just deliver a brand — they delivered a future. The precision and vision were unlike anything we had seen from any agency."</p>
+                <div class="testi-divider"></div>
+                <div class="testi-author">Startup Founder</div>
+                <div class="testi-role">Tech Company · Nairobi, Kenya</div>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"Our website traffic tripled in the first month after AROKELIX rebuilt our digital presence. The ROI speaks for itself. Worth every shilling."</p>
+                <div class="testi-divider"></div>
+                <div class="testi-author">Marketing Director</div>
+                <div class="testi-role">Retail Brand · Lagos, Nigeria</div>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"From logo to website to social strategy — AROKELIX handled everything with one standard: world class. I would not go anywhere else."</p>
+                <div class="testi-divider"></div>
+                <div class="testi-author">CEO & Founder</div>
+                <div class="testi-role">NGO · Accra, Ghana</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="services-cta">
+        <p class="hero-eyebrow">Your Project Next</p>
+        <h2 class="page-title" style="color:var(--ivory);">Ready To Be In<br>This Portfolio?</h2>
+        <p class="page-intro" style="margin-bottom:40px;">Join 50+ clients who chose to build something that lasts.</p>
+        <div class="hero-buttons" style="justify-content:center;">
+            <a href="contact.html" class="btn-primary">Start a Project</a>
+            <a href="services.html" class="btn-secondary">View Services</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">AROKE<span class="gold">L</span>IX</div>
+                <p class="footer-tagline">Anointed to Build. Appointed to Lead.</p>
+                <p class="footer-verse">✦ Exodus 28:1 · Genesis 1:1</p>
+            </div>
+            <div class="footer-col">
+                <h4>Pages</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html">Brand Identity</a>
+                <a href="services.html">Web Development</a>
+                <a href="services.html">Social Media</a>
+                <a href="services.html">Marketing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter / X</a>
+                <a href="contact.html">hello@arokelix.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2025 AROKELIX. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254XXXXXXXXX?text=Hi%20AROKELIX!"
+        class="whatsapp-btn" target="_blank">💬</a>
+
+    <script src="js/main.js"></script>
+    <script>
+        function filterProjects(btn, cat) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.port-item').forEach(item => {
+                if (cat === 'all' || item.dataset.cat === cat) {
+                    item.style.opacity = '1';
+                    item.style.pointerEvents = '';
+                } else {
+                    item.style.opacity = '0.2';
+                    item.style.pointerEvents = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
