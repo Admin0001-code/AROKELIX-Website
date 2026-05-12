@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AROKELIX</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>AROKELIX — Global Creative Studio</title>
+    <meta name="description" content="AROKELIX is a worldwide creative studio offering brand identity, web development, social media, and marketing. Built from Africa. Built for the world.">
+    <meta name="keywords" content="brand design Kenya, web development Africa, creative studio, AROKELIX, social media management">
+    <meta name="author" content="Aron Muiyionko">
+
+    <!-- Open Graph — for WhatsApp LinkedIn Twitter -->
+    <meta property="og:title" content="AROKELIX — Global Creative Studio">
+    <meta property="og:description" content="Anointed to Build. Appointed to Lead. Worldwide creative studio.">
+    <meta property="og:url" content="https://arokelix.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AROKELIX — Global Creative Studio">
+    <meta name="twitter:description" content="Anointed to Build. Appointed to Lead.">
 </head>
 <body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">
+            AROKE<span>L</span>IX
+        </div>
+        <div class="preloader-bar"></div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-text">
+            <div class="cookie-title">✦ We Use Cookies</div>
+            <div class="cookie-desc">We use cookies to improve your experience. See our <a href="privacy.html">Privacy Policy</a> for details.</div>
+        </div>
+        <div class="cookie-btns">
+            <button class="cookie-decline" onclick="declineCookies()">Essential Only</button>
+            <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop">↑</button>
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
@@ -81,7 +116,7 @@
     </div>
 
     <!-- SERVICES SECTION -->
-    <section class="services">
+    <section class="services reveal">
         <div class="services-header">
             <p class="section-eyebrow">What We Do</p>
             <h2 class="section-title">Full-Spectrum<br>Creative Excellence</h2>
@@ -122,7 +157,7 @@
     </section>
 
     <!-- STATS BAR -->
-    <section class="stats">
+    <section class="stats reveal">
         <div class="stats-grid">
             <div class="stat-block">
                 <div class="stat-num">50+</div>
@@ -144,7 +179,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="reveal">
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="footer-logo">AROKE<span class="gold">L</span>IX</div>
