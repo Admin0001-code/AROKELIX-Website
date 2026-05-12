@@ -1619,3 +1619,164 @@ body {
     background: var(--gold);
     color: var(--void);
 }
+
+/* ── PRELOADER TRANSITION ── */
+.preloader {
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* ── TYPING CURSOR ON HERO ── */
+.hero-title::after {
+    content: '|';
+    color: var(--gold);
+    animation: blink 1s infinite;
+    font-weight: 300;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ── HERO RADIAL GLOW STRONGER ── */
+.hero::before {
+    background: radial-gradient(
+        ellipse 80% 60% at 50% 20%,
+        rgba(201,148,10,0.12) 0%,
+        transparent 70%
+    );
+}
+
+/* ── PREMIUM CARD HOVER ── */
+.service-card,
+.stat-block,
+.testi-card,
+.biblical-block,
+.price-card {
+    cursor: default;
+}
+
+/* ── GOLD SCROLLBAR ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* ── GOLD TEXT SELECTION ── */
+::selection { background: var(--gold); color: var(--void); }
+
+/* ── SMOOTH IMAGE HOVER ── */
+.port-item {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ── NAV ACTIVE PAGE ── */
+.nav-links a.active {
+    color: var(--ivory);
+}
+
+/* ── FOOTER LOGO HOVER ── */
+.footer-logo {
+    cursor: default;
+    transition: letter-spacing 0.4s ease;
+    display: inline-block;
+}
+.footer-logo:hover {
+    letter-spacing: 0.4em;
+}
+
+/* ── PREMIUM BUTTON SHINE ── */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+.btn-primary:hover::after {
+    left: 150%;
+}
+
+/* ── SERVICE CARD BOTTOM GOLD ── */
+.service-card {
+    border-bottom: 2px solid transparent;
+    transition: all 0.4s ease, border-bottom-color 0.4s ease;
+}
+.service-card:hover {
+    border-bottom-color: var(--gold);
+}
+
+/* ── MARQUEE GLOW ── */
+.marquee-strip {
+    position: relative;
+    box-shadow:
+        0 4px 20px rgba(201,148,10,0.2),
+        0 -2px 20px rgba(201,148,10,0.1);
+}
+
+/* ── STATS GLOW ON HOVER ── */
+.stat-num {
+    transition: color 0.3s, transform 0.3s;
+}
+.stat-block:hover .stat-num {
+    color: var(--gold3);
+    transform: scale(1.1);
+}
+
+/* ── NAV CTA PULSE ── */
+.nav-cta {
+    animation: navPulse 3s ease-in-out infinite;
+}
+@keyframes navPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(201,148,10,0); }
+    50% { box-shadow: 0 0 0 6px rgba(201,148,10,0.15); }
+}
+
+/* ── HERO BUTTONS GAP ── */
+.hero-buttons {
+    margin-top: 8px;
+    gap: 20px;
+}
+
+/* ── SECTION TITLE UNDERLINE ── */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+/* ── FOOTER BOTTOM BORDER ── */
+footer {
+    border-top: 1px solid rgba(201,148,10,0.15);
+}
+
+/* ── MOBILE FINAL FIXES ── */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 52px;
+        letter-spacing: 0.1em;
+    }
+    .hero-tagline {
+        font-size: 16px;
+    }
+    .btn-primary,
+    .btn-secondary {
+        padding: 14px 28px;
+        font-size: 12px;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .marquee-inner {
+        font-size: 12px;
+    }
+}
