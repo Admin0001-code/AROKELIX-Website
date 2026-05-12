@@ -1054,3 +1054,217 @@ footer {
     .testimonials { padding: 80px 24px; }
     .testi-grid { grid-template-columns: 1fr; }
 }
+
+/* ── CONTACT PAGE ── */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+.contact-left {
+    background: var(--void);
+    padding: 140px 60px 80px;
+}
+.contact-right {
+    background: var(--light-bg);
+    padding: 140px 60px 80px;
+}
+.form-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.08em;
+    color: var(--dark-text);
+    margin-bottom: 36px;
+}
+.contact-info {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 32px;
+}
+.info-block {
+    padding: 18px 24px;
+    border: 1px solid var(--border-d);
+    transition: background 0.3s;
+}
+.info-block:hover {
+    background: rgba(201,148,10,0.04);
+}
+.info-label {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+.info-value {
+    font-size: 14px;
+    color: var(--ivory);
+}
+.info-value a {
+    color: var(--ivory);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.info-value a:hover { color: var(--gold); }
+.contact-social {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.social-link {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border-d);
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.social-link:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-label {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+}
+.form-input {
+    background: white;
+    border: 1px solid var(--border-l);
+    padding: 14px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--dark-text);
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+.form-input:focus { border-color: var(--gold); }
+
+/* ── LEGAL PAGES ── */
+.legal-hero {
+    background: var(--void);
+    padding: 160px 48px 80px;
+}
+.legal-date {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-top: 12px;
+}
+.legal-body {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+    background: var(--light-bg);
+}
+.legal-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted-light);
+    line-height: 1.8;
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-l);
+}
+.legal-section {
+    margin-bottom: 40px;
+}
+.legal-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    color: var(--dark-text);
+    margin-bottom: 14px;
+    padding-top: 8px;
+    border-top: 2px solid var(--gold);
+    display: inline-block;
+}
+.legal-section p {
+    font-size: 14px;
+    color: var(--muted-light);
+    line-height: 1.85;
+}
+.legal-contact {
+    background: var(--void);
+    padding: 36px 40px;
+    margin-top: 60px;
+}
+.legal-contact h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    color: var(--ivory);
+    margin-bottom: 12px;
+}
+.legal-contact p {
+    font-size: 14px;
+    color: var(--muted-dark);
+    line-height: 1.75;
+}
+.legal-contact a {
+    color: var(--gold2);
+    text-decoration: none;
+}
+
+/* ── 404 PAGE ── */
+.not-found {
+    min-height: 100vh;
+    background: var(--void);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 48px 80px;
+}
+.nf-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(120px, 20vw, 200px);
+    color: rgba(201,148,10,0.08);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-bottom: -20px;
+}
+.nf-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 80px);
+    letter-spacing: 0.06em;
+    color: var(--ivory);
+    line-height: 1;
+    margin-bottom: 24px;
+}
+.nf-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 420px;
+    line-height: 1.65;
+}
+
+/* ── CONTACT RESPONSIVE ── */
+@media (max-width: 768px) {
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-left { padding: 140px 24px 60px; }
+    .contact-right { padding: 60px 24px 80px; }
+    .legal-body { padding: 60px 24px 80px; }
+}
