@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AROKELIX — Global Creative Studio</title>
-    <meta name="description" content="AROKELIX is a worldwide creative studio offering brand identity, web development, social media, and marketing. Built from Africa. Built for the world.">
+    <title>AROKELIX — Brand Design & Web Development Agency Kenya</title>
+    <meta name="description" content="AROKELIX is Kenya's leading creative studio offering brand identity, web development, social media and digital marketing. World-class work from Africa.">
+    <meta name="keywords" content="web design Nairobi, brand design Kenya, digital agency Kenya, web development Africa, social media management Kenya, AROKELIX">
     <meta name="author" content="Aron Muiyionko">
-    <meta property="og:title" content="AROKELIX — Global Creative Studio">
-    <meta property="og:description" content="Anointed to Build. Appointed to Lead.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AROKELIX — Brand Design & Web Development Kenya">
+    <meta property="og:description" content="We build brands, websites and marketing systems that win. Built from Africa. Built for the world.">
     <meta property="og:url" content="https://arokelix.com">
     <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://arokelix.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AROKELIX — Brand Design & Web Development Kenya">
+    <meta name="twitter:description" content="We build brands, websites and marketing systems that win.">
+    <link rel="canonical" href="https://arokelix.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- PRELOADER -->
-    <div class="preloader" id="preloader" style="display:none;"></div>
+    <div class="preloader" id="preloader" style="display:none;">
         <div class="preloader-logo">AROKE<span>L</span>IX</div>
         <div class="preloader-bar"></div>
     </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- COOKIE BANNER -->
     <div class="cookie-banner" id="cookieBanner">
         <div class="cookie-text">
             <div class="cookie-title">✦ We Use Cookies</div>
-            <div class="cookie-desc">We use cookies to improve your experience. See our <a href="privacy.html">Privacy Policy</a> for details.</div>
+            <div class="cookie-desc">We use cookies to improve your experience. See our <a href="privacy.html">Privacy Policy</a>.</div>
         </div>
         <div class="cookie-btns">
             <button class="cookie-decline" onclick="declineCookies()">Essential Only</button>
@@ -34,10 +44,10 @@
     </div>
 
     <!-- BACK TO TOP -->
-    <button class="back-to-top" id="backToTop">↑</button>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
     <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" role="navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
@@ -46,111 +56,144 @@
     </div>
 
     <!-- NAVIGATION -->
-    <nav id="nav">
-        <a href="index.html" class="nav-logo">
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="AROKELIX Home">
             AROKE<span class="gold">L</span>IX
         </a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="contact.html" class="nav-cta">Get In Touch</a>
         </div>
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- ══ HERO ══ -->
+    <section class="hero" id="home" aria-label="Hero section">
         <div class="hero-content">
-            <p class="hero-eyebrow">Global Creative Studio</p>
+            <p class="hero-eyebrow">Web Design · Brand Identity · Digital Marketing · Nairobi, Kenya</p>
             <h1 class="hero-title">
-                AROKE<span class="gold">L</span>IX
+                We Build Brands<br>That <span class="gold">Win.</span>
             </h1>
             <div class="hero-sacred"></div>
             <p class="hero-tagline">
-                Anointed to Build. Appointed to Lead.
+                High-converting websites. Powerful brand identities. Marketing systems that grow your business — built from Africa, delivered worldwide.
             </p>
-            <div class="hero-buttons">
-                <a href="portfolio.html" class="btn-primary">View Our Work</a>
-                <a href="contact.html" class="btn-secondary">Start a Project</a>
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <div class="hero-trust-num">50+</div>
+                    <div class="hero-trust-label">Projects</div>
+                </div>
+                <div class="hero-trust-div"></div>
+                <div class="hero-trust-item">
+                    <div class="hero-trust-num">12+</div>
+                    <div class="hero-trust-label">Countries</div>
+                </div>
+                <div class="hero-trust-div"></div>
+                <div class="hero-trust-item">
+                    <div class="hero-trust-num">5★</div>
+                    <div class="hero-trust-label">Rating</div>
+                </div>
+                <div class="hero-trust-div"></div>
+                <div class="hero-trust-item">
+                    <div class="hero-trust-num">100%</div>
+                    <div class="hero-trust-label">Satisfaction</div>
+                </div>
             </div>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn-primary">Get a Free Quote →</a>
+                <a href="portfolio.html" class="btn-secondary">View Our Work</a>
+            </div>
+            <p class="hero-note">✦ No commitment. Response within 24 hours.</p>
         </div>
     </section>
 
-    <!-- MARQUEE -->
-    <div class="marquee-strip">
+    <!-- ══ MARQUEE ══ -->
+    <div class="marquee-strip" aria-hidden="true">
         <div class="marquee-inner">
-            <span>Brand Identity</span>
-            <span>✦</span>
-            <span>Web Development</span>
-            <span>✦</span>
-            <span>Social Media</span>
-            <span>✦</span>
-            <span>Marketing Strategy</span>
-            <span>✦</span>
-            <span>UI/UX Design</span>
-            <span>✦</span>
-            <span>Brand Identity</span>
-            <span>✦</span>
-            <span>Web Development</span>
-            <span>✦</span>
-            <span>Social Media</span>
-            <span>✦</span>
-            <span>Marketing Strategy</span>
-            <span>✦</span>
-            <span>UI/UX Design</span>
-            <span>✦</span>
+            <span>Brand Identity</span><span class="mdot">✦</span>
+            <span>Web Development</span><span class="mdot">✦</span>
+            <span>Social Media</span><span class="mdot">✦</span>
+            <span>Marketing Strategy</span><span class="mdot">✦</span>
+            <span>UI/UX Design</span><span class="mdot">✦</span>
+            <span>Creative Strategy</span><span class="mdot">✦</span>
+            <span>Brand Identity</span><span class="mdot">✦</span>
+            <span>Web Development</span><span class="mdot">✦</span>
+            <span>Social Media</span><span class="mdot">✦</span>
+            <span>Marketing Strategy</span><span class="mdot">✦</span>
+            <span>UI/UX Design</span><span class="mdot">✦</span>
+            <span>Creative Strategy</span><span class="mdot">✦</span>
         </div>
     </div>
 
-    <!-- SERVICES -->
-    <section class="services">
+    <!-- ══ SERVICES ══ -->
+    <section class="services" id="services" aria-label="Services">
         <div class="services-header">
             <p class="section-eyebrow">What We Do</p>
-            <h2 class="section-title">Full-Spectrum<br>Creative Excellence</h2>
-            <p class="section-desc">One studio. Every discipline. From pixel to campaign to product.</p>
+            <h2 class="section-title">Six Ways We Grow<br>Your Business</h2>
+            <p class="section-desc">Not just deliverables — outcomes. Every service is designed to generate real results for your brand.</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
+                <div class="service-icon">◈</div>
                 <div class="service-num">01</div>
-                <div class="service-name">Brand Identity</div>
-                <p class="service-desc">Logos, visual systems and brand guidelines built to own markets and endure generations.</p>
+                <div class="service-name">High-Converting<br>Brand Identity</div>
+                <p class="service-desc">Logos and visual systems that make clients choose you over competitors — before you say a word.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
             </div>
             <div class="service-card">
+                <div class="service-icon">◈</div>
                 <div class="service-num">02</div>
-                <div class="service-name">Web Development</div>
-                <p class="service-desc">Precision-engineered websites and web applications. Clean code. Stunning interfaces.</p>
+                <div class="service-name">Business Websites<br>That Convert</div>
+                <p class="service-desc">Precision-built websites that turn visitors into paying clients. Fast. Mobile-first. SEO-ready.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
             </div>
-            <div class="service-card">
+            <div class="service-card service-card-featured">
+                <div class="service-badge">Most Popular</div>
+                <div class="service-icon">◈</div>
                 <div class="service-num">03</div>
-                <div class="service-name">Social Media</div>
-                <p class="service-desc">Content strategy, creation and management that builds audiences and converts followers.</p>
+                <div class="service-name">Social Media That<br>Builds Audiences</div>
+                <p class="service-desc">Content strategy and creation that grows real followers and converts them into real clients.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
             </div>
             <div class="service-card">
+                <div class="service-icon">◈</div>
                 <div class="service-num">04</div>
-                <div class="service-name">Marketing</div>
-                <p class="service-desc">Data-driven campaigns across paid and organic channels engineered for results.</p>
+                <div class="service-name">Marketing Campaigns<br>With Measurable ROI</div>
+                <p class="service-desc">Paid and organic campaigns engineered for results. We track every shilling and optimise every day.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
             </div>
             <div class="service-card">
+                <div class="service-icon">◈</div>
                 <div class="service-num">05</div>
-                <div class="service-name">UI/UX Design</div>
-                <p class="service-desc">User interfaces that feel inevitable. Research-backed digital experiences for web and mobile.</p>
+                <div class="service-name">UI/UX Design That<br>Users Love</div>
+                <p class="service-desc">Digital experiences so intuitive they feel inevitable. Research-backed. Beautifully executed.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
             </div>
             <div class="service-card">
+                <div class="service-icon">◈</div>
                 <div class="service-num">06</div>
-                <div class="service-name">Strategy</div>
-                <p class="service-desc">Business and digital strategy consulting. We help brands understand where to go.</p>
+                <div class="service-name">Creative Strategy<br>& Consulting</div>
+                <p class="service-desc">We help you understand where to go — and build the complete roadmap to get there fast.</p>
+                <a href="services.html" class="service-link">Learn more →</a>
             </div>
+        </div>
+        <div class="services-cta-row">
+            <a href="services.html" class="btn-primary">See All Services & Pricing →</a>
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats">
+    <!-- ══ STATS ══ -->
+    <section class="stats" aria-label="Statistics">
+        <div class="stats-eyebrow">
+            <p class="section-eyebrow" style="color:var(--gold);">Proven Results</p>
+        </div>
         <div class="stats-grid">
             <div class="stat-block">
                 <div class="stat-num">50+</div>
@@ -171,8 +214,71 @@
         </div>
     </section>
 
-   <!-- TESTIMONIALS -->
-    <section class="home-testi">
+    <!-- ══ CASE RESULTS STRIP ══ -->
+    <section class="case-strip" aria-label="Case study results">
+        <div class="case-strip-inner">
+            <div class="case-item">
+                <div class="case-num">340%</div>
+                <div class="case-label">ROI for e-commerce brand</div>
+            </div>
+            <div class="case-divider"></div>
+            <div class="case-item">
+                <div class="case-num">10K</div>
+                <div class="case-label">New followers in 60 days</div>
+            </div>
+            <div class="case-divider"></div>
+            <div class="case-item">
+                <div class="case-num">3×</div>
+                <div class="case-label">Website traffic in 30 days</div>
+            </div>
+            <div class="case-divider"></div>
+            <div class="case-item">
+                <div class="case-num">8wks</div>
+                <div class="case-label">Average delivery time</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ PORTFOLIO TEASER ══ -->
+    <section class="port-teaser" aria-label="Portfolio preview">
+        <div class="port-teaser-header">
+            <p class="section-eyebrow" style="color:var(--gold);">Selected Work</p>
+            <h2 class="section-title" style="color:var(--ivory);">Built To Last.</h2>
+            <p class="section-desc" style="color:var(--muted);">Real projects. Real results. Every one built to the same world-class standard.</p>
+        </div>
+        <div class="port-teaser-grid">
+            <div class="pt-item pt-bg-1">
+                <div class="pt-overlay"></div>
+                <div class="pt-info">
+                    <div class="pt-cat">Branding · Identity</div>
+                    <div class="pt-name">Corporate Brand System</div>
+                    <a href="portfolio.html" class="pt-link">View Project →</a>
+                </div>
+            </div>
+            <div class="pt-item pt-bg-2">
+                <div class="pt-overlay"></div>
+                <div class="pt-info">
+                    <div class="pt-cat">Web Development</div>
+                    <div class="pt-name">E-Commerce Platform</div>
+                    <a href="portfolio.html" class="pt-link">View Project →</a>
+                </div>
+            </div>
+            <div class="pt-item pt-bg-3">
+                <div class="pt-overlay"></div>
+                <div class="pt-info">
+                    <div class="pt-cat">Marketing</div>
+                    <div class="pt-name">340% ROI Campaign</div>
+                    <a href="portfolio.html" class="pt-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:48px;">
+            <a href="portfolio.html" class="btn-secondary">View All Work →</a>
+        </div>
+    </section>
+
+    <!-- ══ TESTIMONIALS ══ -->
+    <section class="home-testi" aria-label="Client testimonials">
         <div class="home-testi-header">
             <p class="section-eyebrow">Client Voices</p>
             <h2 class="section-title" style="color:var(--ivory);">What Clients Say</h2>
@@ -187,74 +293,57 @@
             </div>
             <div class="home-testi-card htc-featured">
                 <div class="htc-stars">★★★★★</div>
-                <p class="htc-quote">"Our website traffic tripled in 30 days after AROKELIX rebuilt our digital presence. The ROI was extraordinary. World-class work."</p>
+                <p class="htc-quote">"Our website traffic tripled in 30 days after AROKELIX rebuilt our digital presence. The ROI was extraordinary. World-class work from Africa."</p>
                 <div class="htc-divider"></div>
                 <div class="htc-author">Amina Wanjiku</div>
                 <div class="htc-role">Marketing Director · Lagos</div>
             </div>
             <div class="home-testi-card">
                 <div class="htc-stars">★★★★★</div>
-                <p class="htc-quote">"From logo to website to strategy — one studio handled everything. I would not go anywhere else. AROKELIX is the standard."</p>
+                <p class="htc-quote">"From logo to website to strategy — one studio handled everything at world-class level. I would not go anywhere else. AROKELIX is the standard."</p>
                 <div class="htc-divider"></div>
                 <div class="htc-author">David Mensah</div>
                 <div class="htc-role">Founder · NGO · Accra</div>
             </div>
         </div>
-        <div style="text-align:center;margin-top:48px;">
-            <a href="portfolio.html" class="btn-secondary">See All Work →</a>
-        </div>
     </section>
 
-    <!-- CASE STUDY STRIP -->
-    <section class="case-strip">
-        <div class="case-strip-inner">
-            <div class="case-item">
-                <div class="case-num">340%</div>
-                <div class="case-label">ROI delivered for e-commerce brand</div>
-            </div>
-            <div class="case-divider"></div>
-            <div class="case-item">
-                <div class="case-num">10K</div>
-                <div class="case-label">New followers in 60 days</div>
-            </div>
-            <div class="case-divider"></div>
-            <div class="case-item">
-                <div class="case-num">3×</div>
-                <div class="case-label">Website traffic increase in 30 days</div>
-            </div>
-            <div class="case-divider"></div>
-            <div class="case-item">
-                <div class="case-num">8wks</div>
-                <div class="case-label">Average full delivery time</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="home-cta">
+    <!-- ══ HOME CTA ══ -->
+    <section class="home-cta" aria-label="Call to action">
         <div class="home-cta-inner">
-            <p class="hero-eyebrow">✦ Ready To Begin?</p>
-            <h2 class="home-cta-title">Let's Build<br>Something<br><span>Eternal.</span></h2>
-            <p class="home-cta-sub">Your worldwide company starts with one conversation.</p>
+            <p class="hero-eyebrow">✦ Start Today</p>
+            <h2 class="home-cta-title">Ready To Build<br>Something <span>Eternal?</span></h2>
+            <p class="home-cta-sub">Your worldwide company starts with one conversation. No commitment. We respond within 24 hours.</p>
             <div class="hero-buttons" style="justify-content:center;margin-top:48px;">
-                <a href="contact.html" class="btn-primary">Start a Project</a>
-                <a href="services.html" class="btn-secondary">View Services</a>
+                <a href="contact.html" class="btn-primary">Get a Free Quote →</a>
+                <a href="services.html" class="btn-secondary">View Pricing</a>
+            </div>
+            <div class="cta-trust">
+                <span>✦ No upfront commitment</span>
+                <span>✦ Response in 24hrs</span>
+                <span>✦ 100% satisfaction</span>
             </div>
         </div>
-    </section> 
+    </section>
 
-    <!-- FOOTER -->
-    <footer">
+    <!-- ══ FOOTER ══ -->
+    <footer aria-label="Footer">
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="footer-logo">AROKE<span class="gold">L</span>IX</div>
-                <p class="footer-tagline">Anointed to Build. Appointed to Lead.</p>
-                <p class="footer-verse">✦ Exodus 28:1 · Genesis 1:1</p>
+                <p class="footer-tagline">We build brands, websites and marketing systems that help businesses grow — locally and globally.</p>
+                <p class="footer-verse">✦ Anointed to Build. Appointed to Lead.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="#" aria-label="Twitter">tw</a>
+                    <a href="#" aria-label="Behance">be</a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4>Pages</h4>
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="about.html">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="contact.html">Contact</a>
@@ -266,26 +355,33 @@
                 <a href="services.html">Social Media</a>
                 <a href="services.html">Marketing</a>
                 <a href="services.html">UI/UX Design</a>
+                <a href="services.html">Strategy</a>
             </div>
             <div class="footer-col">
-                <h4>Connect</h4>
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter / X</a>
-                <a href="contact.html">hello@arokelix.com</a>
+                <h4>Contact</h4>
+                <a href="mailto:hello@arokelix.com">hello@arokelix.com</a>
+                <a href="https://wa.me/254745851594">WhatsApp Us</a>
+                <a href="contact.html">Start a Project</a>
+                <br>
+                <p style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;">Nairobi, Kenya<br>Serving clients worldwide</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-copy">© 2025 AROKELIX. All rights reserved.</div>
+            <div class="footer-copy">© 2025 AROKELIX. All rights reserved. Built from Africa.</div>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms & Conditions</a>
+                <a href="sitemap.html">Sitemap</a>
             </div>
         </div>
     </footer>
 
+    <!-- WHATSAPP -->
     <a href="https://wa.me/254745851594?text=Hi%20AROKELIX!%20I%20would%20like%20to%20discuss%20a%20project."
-        class="whatsapp-btn" target="_blank">💬</a>
+        class="whatsapp-btn"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat on WhatsApp">💬</a>
 
     <script src="js/main.js"></script>
 </body>
