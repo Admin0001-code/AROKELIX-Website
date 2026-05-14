@@ -104,3 +104,15 @@ function declineCookies() {
     var b = document.getElementById('cookieBanner');
     if (b) b.classList.remove('show');
 }
+
+// ── SCROLL PROGRESS BAR
+var progressBar = document.createElement('div');
+progressBar.className = 'scroll-progress';
+document.body.prepend(progressBar);
+
+window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.body.scrollHeight - window.innerHeight;
+    var progress = (scrollTop / docHeight) * 100;
+    progressBar.style.width = progress + '%';
+});
