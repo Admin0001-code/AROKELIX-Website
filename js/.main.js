@@ -231,3 +231,26 @@ window.addEventListener('load', function() {
         }, 800);
     }
 });
+
+// ── PROOF SECTION COUNTER
+document.querySelectorAll('.proof-number, .psc-num').forEach(function(el) {
+    countObs.observe(el);
+});
+
+// ── SERVICE CARDS — ADD STAGGER
+document.querySelectorAll('.service-card').forEach(function(card, i) {
+    card.style.transitionDelay = (i * 0.055) + 's';
+});
+
+// ── WHY CARDS — ADD STAGGER
+document.querySelectorAll('.why-card').forEach(function(card, i) {
+    card.classList.add('reveal');
+    card.style.transitionDelay = (i * 0.08) + 's';
+});
+
+// ── PROOF CARDS — REVEAL
+document.querySelectorAll('.proof-card-large, .proof-stat-card').forEach(function(card, i) {
+    card.classList.add('reveal');
+    card.style.transitionDelay = (i * 0.1) + 's';
+    revealObs.observe(card);
+});
