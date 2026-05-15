@@ -1835,3 +1835,842 @@ footer::before {
     .whatsapp-btn { border-radius: 50%; width: 52px; height: 52px; justify-content: center; padding: 0; }
     .wa-icon { font-size: 24px; }
 }
+
+/* ══════════════════════════════════════
+   WORLD CLASS PREMIUM TOUCHES
+   Every detail that separates good from legendary
+══════════════════════════════════════ */
+
+/* ── TOUCH 1: GRAIN TEXTURE OVERLAY ──
+   Used by Apple, Stripe, Linear
+   Adds cinematic film grain to the whole page */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99997;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+}
+
+/* ── TOUCH 2: ATMOSPHERIC SIDE GLOW ──
+   Warm gold ambiance from the edges */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: -200px;
+    width: 600px; height: 100vh;
+    background: radial-gradient(
+        ellipse at left,
+        rgba(201,148,10,0.04) 0%,
+        transparent 65%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── TOUCH 3: PREMIUM LINK UNDERLINE ──
+   Animated underline on all text links */
+.footer-col a,
+.legal-contact a,
+.legal-section a {
+    position: relative;
+    display: inline-block;
+}
+.footer-col a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0;
+    width: 0; height: 1px;
+    background: var(--c-gold);
+    transition: width 0.35s var(--ease);
+}
+.footer-col a:hover::after { width: 100%; }
+
+/* ── TOUCH 4: SECTION ENTRY GLOW ──
+   Every dark section gets a subtle top glow */
+.stats::before,
+.home-testi::before,
+.why-us::before,
+.proof-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60%; height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(201,148,10,0.3),
+        transparent
+    );
+}
+.stats, .home-testi, .why-us {
+    position: relative;
+}
+
+/* ── TOUCH 5: HERO TITLE WORD SPACING ──
+   Give the hero headline more authority */
+.hero-title {
+    word-spacing: 0.04em;
+    text-wrap: balance;
+}
+
+/* ── TOUCH 6: PREMIUM INPUT PLACEHOLDER ── */
+.form-input::placeholder {
+    color: rgba(12,16,32,0.28);
+    font-style: italic;
+    font-family: var(--ff-serif);
+}
+
+/* ── TOUCH 7: CARD ENTRANCE SHIMMER ──
+   Cards get a one-time shimmer when hovered first time */
+.service-card,
+.why-card,
+.home-testi-card,
+.proof-stat-card {
+    background-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(201,148,10,0) 100%
+    );
+    background-size: 200% 200%;
+    transition: all 0.45s var(--ease), background-position 0.6s ease;
+}
+.service-card:hover,
+.why-card:hover,
+.home-testi-card:hover {
+    background-position: 100% 100%;
+}
+
+/* ── TOUCH 8: NAVIGATION LOGO SACRED MARK ──
+   A tiny gold dot after the logo */
+.nav-logo::after {
+    content: ' ✦';
+    font-size: 8px;
+    color: var(--c-gold);
+    opacity: 0.4;
+    vertical-align: super;
+    transition: opacity 0.3s;
+}
+.nav-logo:hover::after { opacity: 1; }
+
+/* ── TOUCH 9: MARQUEE TEXT SHADOW ── */
+.marquee-inner span {
+    text-shadow: 0 1px 2px rgba(4,5,10,0.2);
+}
+
+/* ── TOUCH 10: HERO SACRED LINE PULSE ── */
+.hero-sacred {
+    animation: sacredPulse 3s ease-in-out infinite;
+}
+@keyframes sacredPulse {
+    0%, 100% { opacity: 0.35; height: 44px; }
+    50% { opacity: 0.65; height: 52px; }
+}
+
+/* ── TOUCH 11: STATS NUMBER GLOW PULSE ── */
+.stat-num {
+    animation: numGlow 4s ease-in-out infinite;
+}
+@keyframes numGlow {
+    0%, 100% { text-shadow: 0 0 30px rgba(201,148,10,0.15); }
+    50% { text-shadow: 0 0 50px rgba(201,148,10,0.4); }
+}
+
+/* ── TOUCH 12: FOOTER SACRED MARK ──
+   AROKELIX verse breathes */
+.footer-verse {
+    animation: verseFade 4s ease-in-out infinite;
+}
+@keyframes verseFade {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 0.75; }
+}
+
+/* ── TOUCH 13: BUTTON RIPPLE EFFECT ──
+   Premium tactile button response */
+.btn-gold,
+.btn-primary {
+    overflow: hidden;
+}
+.btn-gold::after,
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    transition: transform 0.5s var(--ease), opacity 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+.btn-gold:active::after,
+.btn-primary:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* ── TOUCH 14: SECTION TITLE WORD HIGHLIGHT ──
+   The span inside section titles gets special treatment */
+.section-title span,
+.home-cta-title span,
+.proof-title span {
+    position: relative;
+    display: inline-block;
+}
+
+/* ── TOUCH 15: PORTFOLIO ITEM CAPTION SLIDE ──
+   Text slides up from below on hover */
+.pt-info {
+    transform: translateY(8px);
+    transition: transform 0.4s var(--ease);
+}
+.pt-item:hover .pt-info {
+    transform: translateY(0);
+}
+
+/* ── TOUCH 16: TESTIMONIAL QUOTE MARK PULSE ── */
+.home-testi-card::before {
+    animation: quotePulse 5s ease-in-out infinite;
+}
+@keyframes quotePulse {
+    0%, 100% { opacity: 0.06; }
+    50% { opacity: 0.12; }
+}
+
+/* ── TOUCH 17: CASE STRIP NUMBER HOVER ── */
+.case-item {
+    transition: transform 0.4s var(--ease);
+}
+.case-item:hover { transform: translateY(-4px); }
+.case-num {
+    transition: text-shadow 0.4s;
+}
+.case-item:hover .case-num {
+    text-shadow: 0 4px 20px rgba(4,5,10,0.25);
+}
+
+/* ── TOUCH 18: WHY CARD NUMBER ── */
+.why-card::after {
+    content: attr(data-num);
+    position: absolute;
+    bottom: var(--sp-3); right: var(--sp-4);
+    font-family: var(--ff-head);
+    font-size: 80px;
+    color: rgba(201,148,10,0.04);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: color 0.4s;
+}
+.why-card:hover::after {
+    color: rgba(201,148,10,0.08);
+}
+
+/* ── TOUCH 19: HERO EYEBROW ENTRANCE ── */
+.hero-eyebrow {
+    animation: eyebrowSlide 0.8s 0.05s var(--ease) both;
+}
+@keyframes eyebrowSlide {
+    from { opacity: 0; letter-spacing: 0.2em; }
+    to { opacity: 0.85; letter-spacing: 0.45em; }
+}
+
+/* ── TOUCH 20: PROOF NUMBER ENTRANCE ── */
+.proof-number {
+    position: relative;
+}
+.proof-number::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 40px; height: 2px;
+    background: var(--c-gold);
+    opacity: 0.5;
+}
+
+/* ── TOUCH 21: NAV ACTIVE INDICATOR ── */
+.nav-links a[aria-current="page"] {
+    color: var(--c-ivory);
+}
+.nav-links a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+/* ── TOUCH 22: IMAGE PREMIUM TREATMENT ──
+   Any img on the site gets these defaults */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+.img-gold-border {
+    border: 1px solid var(--b-gold);
+    padding: 4px;
+}
+.img-dark-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.img-dark-overlay::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(4,5,10,0.7) 100%
+    );
+}
+
+/* ── TOUCH 23: SCROLLBAR GOLD GLOW ── */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--c-gold), var(--c-gold2));
+    box-shadow: 0 0 6px rgba(201,148,10,0.4);
+}
+
+/* ── TOUCH 24: FOCUS RING GOLD ── */
+*:focus-visible {
+    outline: 2px solid var(--c-gold2);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(201,148,10,0.15);
+}
+
+/* ── TOUCH 25: SECTION EYEBROW ANIMATION ── */
+.section-eyebrow {
+    animation: none;
+}
+.reveal.visible .section-eyebrow {
+    animation: eyebrowSlide 0.6s var(--ease) both;
+}
+
+/* ── TOUCH 26: PREMIUM HR DIVIDER ── */
+hr, .divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(201,148,10,0.2),
+        transparent
+    );
+    margin: var(--sp-6) 0;
+}
+
+/* ── TOUCH 27: SERVICE CARD FEATURED GLOW ── */
+.service-card-featured {
+    box-shadow:
+        0 0 0 1px rgba(201,148,10,0.2),
+        0 0 40px rgba(201,148,10,0.05),
+        inset 0 0 60px rgba(201,148,10,0.03);
+}
+.service-card-featured:hover {
+    box-shadow:
+        0 0 0 1px rgba(201,148,10,0.4),
+        0 0 60px rgba(201,148,10,0.12),
+        0 24px 60px rgba(0,0,0,0.4);
+}
+
+/* ── TOUCH 28: WHY CARD GOLD VARIANT GLOW ── */
+.why-card-gold {
+    box-shadow:
+        0 0 40px rgba(201,148,10,0.06),
+        inset 0 0 40px rgba(201,148,10,0.03);
+}
+
+/* ── TOUCH 29: HERO TRUST BAR GLOW ── */
+.hero-trust {
+    box-shadow:
+        0 0 0 1px rgba(201,148,10,0),
+        0 8px 32px rgba(0,0,0,0.2);
+    transition: box-shadow 0.4s, border-color 0.4s;
+}
+.hero-trust:hover {
+    box-shadow:
+        0 0 0 1px rgba(201,148,10,0.15),
+        0 8px 40px rgba(201,148,10,0.1);
+}
+
+/* ── TOUCH 30: PROOF CARD LARGE GLOW PULSE ── */
+.proof-card-large {
+    animation: proofPulse 6s ease-in-out infinite;
+}
+@keyframes proofPulse {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(201,148,10,0.25), 0 0 40px rgba(201,148,10,0.05); }
+    50% { box-shadow: 0 0 0 1px rgba(201,148,10,0.4), 0 0 60px rgba(201,148,10,0.12); }
+}
+
+/* ══════════════════════════════════════
+   FIXES — All Layout & Button Issues
+══════════════════════════════════════ */
+
+/* ── INNER WRAP — Consistent container ── */
+.inner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ── WHY US — Fixed ── */
+.why-us {
+    background: var(--c-dark1);
+    padding: var(--sp-10) var(--sp-6);
+    position: relative;
+}
+.why-header {
+    text-align: center;
+    margin-bottom: var(--sp-7);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: var(--sp-6);
+}
+.why-card {
+    background: var(--c-dark2);
+    border: 1px solid var(--b-dark);
+    padding: var(--sp-6) var(--sp-5);
+    transition: all 0.45s var(--ease);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--c-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.why-card::after {
+    content: attr(data-num);
+    position: absolute;
+    bottom: var(--sp-3); right: var(--sp-4);
+    font-family: var(--ff-head);
+    font-size: 80px;
+    color: rgba(201,148,10,0.05);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: color 0.4s;
+}
+.why-card:hover {
+    background: var(--c-dark3);
+    border-color: var(--b-gold);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+.why-card:hover::before { opacity: 1; }
+.why-card:hover::after { color: rgba(201,148,10,0.1); }
+.why-card-gold {
+    background: rgba(201,148,10,0.06);
+    border-color: var(--b-gold);
+}
+.why-card-gold:hover { background: rgba(201,148,10,0.1); }
+.why-icon {
+    font-size: 20px; color: var(--c-gold); opacity: 0.35;
+    margin-bottom: var(--sp-3); display: inline-block;
+    transition: opacity 0.4s, transform 0.4s;
+}
+.why-card:hover .why-icon { opacity: 1; transform: scale(1.15) rotate(15deg); }
+.why-title {
+    font-family: var(--ff-head);
+    font-size: 22px; letter-spacing: 0.06em;
+    color: var(--c-ivory); margin-bottom: var(--sp-2); line-height: 1.1;
+}
+.why-desc {
+    font-size: 14px; color: var(--c-muted2); line-height: 1.82;
+}
+
+/* ── PROOF SECTION — Fixed ── */
+.proof-section {
+    background: var(--c-black);
+    padding: var(--sp-10) var(--sp-6);
+    position: relative;
+}
+.proof-header {
+    text-align: center;
+    margin-bottom: var(--sp-7);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.proof-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+.proof-card-large {
+    background: var(--c-dark2);
+    border: 1px solid var(--b-gold);
+    padding: var(--sp-6) var(--sp-5);
+    position: relative; overflow: hidden;
+    transition: all 0.45s var(--ease);
+    animation: proofPulse 6s ease-in-out infinite;
+}
+.proof-card-large::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--c-gold), var(--c-gold3), var(--c-gold));
+}
+.proof-card-large:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+@keyframes proofPulse {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(201,148,10,0.25), 0 0 40px rgba(201,148,10,0.05); }
+    50% { box-shadow: 0 0 0 1px rgba(201,148,10,0.4), 0 0 60px rgba(201,148,10,0.12); }
+}
+.proof-number {
+    font-family: var(--ff-head);
+    font-size: clamp(64px, 9vw, 96px);
+    color: var(--c-gold2); line-height: 1;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 40px rgba(201,148,10,0.4);
+    margin-bottom: var(--sp-1);
+    position: relative;
+}
+.proof-number::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 40px; height: 2px;
+    background: var(--c-gold); opacity: 0.5;
+}
+.proof-label {
+    font-size: var(--fs-xs); letter-spacing: 0.4em;
+    text-transform: uppercase; color: var(--c-gold);
+    opacity: 0.7; margin-bottom: var(--sp-3);
+    margin-top: var(--sp-2);
+}
+.proof-divider {
+    width: 48px; height: 1px;
+    background: var(--c-gold); opacity: 0.35;
+    margin-bottom: var(--sp-3);
+}
+.proof-title {
+    font-family: var(--ff-head);
+    font-size: 26px; letter-spacing: 0.06em;
+    color: var(--c-ivory); margin-bottom: var(--sp-2); line-height: 1.1;
+}
+.proof-desc {
+    font-size: 14px; color: var(--c-muted2);
+    line-height: 1.85; margin-bottom: var(--sp-3);
+}
+.proof-tags {
+    display: flex; flex-wrap: wrap; gap: var(--sp-1);
+}
+.proof-tags span {
+    font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--c-gold); border: 1px solid var(--b-gold); padding: 4px 12px;
+}
+.proof-right {
+    display: flex; flex-direction: column; gap: 2px;
+}
+.proof-stat-card {
+    background: var(--c-dark2); border: 1px solid var(--b-dark);
+    padding: var(--sp-5); flex: 1;
+    transition: all 0.4s var(--ease); position: relative; overflow: hidden;
+}
+.proof-stat-card::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; width: 2px;
+    background: var(--c-gold); opacity: 0; transition: opacity 0.4s;
+}
+.proof-stat-card:hover {
+    border-color: var(--b-gold); background: var(--c-dark3);
+    transform: translateX(4px);
+}
+.proof-stat-card:hover::after { opacity: 1; }
+.psc-num {
+    font-family: var(--ff-head);
+    font-size: clamp(40px, 6vw, 56px);
+    color: var(--c-gold2); line-height: 1;
+    letter-spacing: 0.04em; margin-bottom: var(--sp-1);
+    text-shadow: 0 0 30px rgba(201,148,10,0.3);
+}
+.psc-label {
+    font-size: var(--fs-xs); letter-spacing: 0.38em;
+    text-transform: uppercase; color: var(--c-gold);
+    opacity: 0.7; margin-bottom: var(--sp-2);
+}
+.psc-desc {
+    font-size: 13px; color: var(--c-muted2); line-height: 1.75;
+}
+
+/* ── PORTFOLIO TEASER CTA — Centered ── */
+.port-teaser-cta {
+    text-align: center;
+    margin-top: var(--sp-6);
+}
+
+/* ── HOME CTA — Complete Fix ── */
+.home-cta {
+    background: var(--c-black);
+    padding: var(--sp-10) var(--sp-6);
+    text-align: center;
+    position: relative; overflow: hidden;
+}
+.home-cta::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; height: 500px;
+    background: radial-gradient(ellipse, rgba(201,148,10,0.1) 0%, transparent 68%);
+    pointer-events: none;
+}
+.home-cta::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(201,148,10,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,148,10,0.018) 1px, transparent 1px);
+    background-size: 60px 60px; pointer-events: none;
+}
+.home-cta-inner {
+    position: relative; z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.home-cta-title {
+    font-family: var(--ff-head);
+    font-size: clamp(52px, 11vw, 108px);
+    letter-spacing: 0.06em;
+    color: var(--c-ivory);
+    line-height: 0.92;
+    margin: var(--sp-4) 0;
+}
+.home-cta-title span { color: var(--c-gold2); }
+.home-cta-sub {
+    font-family: var(--ff-serif);
+    font-style: italic; font-weight: 300;
+    font-size: clamp(17px, 2vw, 21px);
+    color: var(--c-muted2);
+    max-width: 500px; margin: 0 auto;
+    line-height: 1.72;
+}
+
+/* ── CTA BUTTONS — FIXED ALIGNMENT ── */
+.home-cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+    margin-top: var(--sp-5);
+    flex-wrap: wrap;
+}
+.home-cta-buttons .btn-gold,
+.home-cta-buttons .btn-ghost {
+    min-width: 200px;
+    text-align: center;
+}
+
+/* ── CTA TRUST ── */
+.cta-trust {
+    display: flex;
+    gap: var(--sp-5);
+    justify-content: center;
+    margin-top: var(--sp-4);
+    flex-wrap: wrap;
+}
+.cta-trust span {
+    font-size: 11px; letter-spacing: 0.14em;
+    color: var(--c-muted1); opacity: 0.65;
+}
+
+/* ── HERO CTAS — FIXED ALIGNMENT ── */
+.hero-ctas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+.hero-ctas .btn-gold,
+.hero-ctas .btn-ghost {
+    min-width: 200px;
+    text-align: center;
+}
+
+/* ── ALL BUTTONS — SAME HEIGHT ── */
+.btn-gold, .btn-primary,
+.btn-ghost, .btn-secondary,
+.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 var(--sp-5);
+    white-space: nowrap;
+    font-family: var(--ff-head);
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s var(--ease);
+    vertical-align: middle;
+}
+.btn-gold, .btn-primary {
+    background: var(--c-gold);
+    color: var(--c-black);
+    box-shadow: 0 4px 20px rgba(201,148,10,0.25);
+}
+.btn-gold:hover, .btn-primary:hover {
+    background: var(--c-gold2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 36px rgba(201,148,10,0.4);
+    color: var(--c-black);
+}
+.btn-ghost, .btn-secondary {
+    background: transparent;
+    color: var(--c-ivory);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-ghost:hover, .btn-secondary:hover {
+    border-color: var(--c-gold);
+    color: var(--c-gold);
+    transform: translateY(-3px);
+}
+.btn-dark {
+    background: transparent;
+    color: var(--c-text);
+    border: 1px solid rgba(12,16,32,0.2);
+}
+.btn-dark:hover {
+    border-color: var(--c-gold); color: var(--c-gold);
+    transform: translateY(-2px);
+}
+
+/* ── WHATSAPP — FIXED FULLY ── */
+.whatsapp-btn {
+    position: fixed;
+    bottom: var(--sp-4);
+    right: var(--sp-4);
+    z-index: 1002;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    background: #25D366;
+    border-radius: 50px;
+    padding: 14px 22px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+    transition: all 0.35s var(--ease);
+    animation: waPulse 2.5s ease-in-out infinite;
+    white-space: nowrap;
+}
+@keyframes waPulse {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 6px 40px rgba(37,211,102,0.65), 0 0 0 8px rgba(37,211,102,0.08); }
+}
+.whatsapp-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(37,211,102,0.55);
+}
+.wa-icon { font-size: 20px; flex-shrink: 0; }
+.wa-label {
+    font-family: var(--ff-body);
+    font-size: 13px; font-weight: 600;
+    color: white; letter-spacing: 0.02em;
+}
+
+/* ── BACK TO TOP — DOESN'T OVERLAP ── */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: var(--sp-4);
+    z-index: 1001;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — ALL FIXES
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .proof-right { flex-direction: row; flex-wrap: wrap; }
+    .proof-stat-card { flex: 1; min-width: 200px; }
+    .inner-wrap { padding: 0 var(--sp-4); }
+}
+
+@media (max-width: 768px) {
+    .why-us { padding: var(--sp-7) var(--sp-3); }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-card { padding: var(--sp-5) var(--sp-4); }
+    .why-header { margin-bottom: var(--sp-5); }
+
+    .proof-section { padding: var(--sp-7) var(--sp-3); }
+    .proof-grid { grid-template-columns: 1fr; }
+    .proof-card-large { padding: var(--sp-5) var(--sp-4); }
+    .proof-right { flex-direction: column; }
+    .proof-stat-card { padding: var(--sp-4); }
+
+    .home-cta { padding: var(--sp-8) var(--sp-3); }
+    .home-cta-title { font-size: clamp(44px, 13vw, 72px); }
+    .home-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--sp-2);
+    }
+    .home-cta-buttons .btn-gold,
+    .home-cta-buttons .btn-ghost {
+        width: 100%;
+        max-width: 300px;
+    }
+    .cta-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--sp-2);
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--sp-2);
+    }
+    .hero-ctas .btn-gold,
+    .hero-ctas .btn-ghost {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .whatsapp-btn { padding: 12px 18px; }
+    .wa-label { font-size: 12px; }
+    .back-to-top { bottom: 88px; }
+
+    .inner-wrap { padding: 0; }
+}
+
+@media (max-width: 480px) {
+    .why-card { padding: var(--sp-4) var(--sp-3); }
+    .proof-number { font-size: 64px; }
+    .psc-num { font-size: 40px; }
+    .home-cta-title { font-size: 40px; }
+    .wa-label { display: none; }
+    .whatsapp-btn {
+        width: 52px; height: 52px;
+        border-radius: 50%;
+        padding: 0;
+        justify-content: center;
+    }
+    .wa-icon { font-size: 22px; }
+    .back-to-top { bottom: 76px; right: var(--sp-3); }
+}
