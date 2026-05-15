@@ -336,7 +336,7 @@ nav.scrolled {
 /* Hero background image with overlay */
 .hero-bg-img {
     position: absolute; inset: 0;
-    background-image: url('images/hero-bg.jpg');
+    background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
