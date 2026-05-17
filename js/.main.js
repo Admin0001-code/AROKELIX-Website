@@ -239,3 +239,87 @@ if ('IntersectionObserver' in window) {
 
 // ── CONSOLE SIGNATURE
 console.log('%c\n ✦ AROKELIX ✦ \n Where craft meets eternal. \n Built from Africa — for the world. \n hello@arokelix.com \n', 'color:#E5AB18;font-family:monospace;font-size:13px;background:#04050A;padding:16px;border-left:3px solid #C9940A;');
+
+/* ══════════════════════════════════════
+   ADDITIONAL JS — Premium touches
+══════════════════════════════════════ */
+
+// ── CURSOR GLOW (desktop only)
+if (window.innerWidth > 1024 && !('ontouchstart' in window)) {
+    var glow = document.createElement('div');
+    glow.style.cssText = [
+        'position:fixed',
+        'width:300px', 'height:300px',
+        'border-radius:50%',
+        'background:radial-gradient(circle,rgba(201,148,10,0.05) 0%,transparent 70%)',
+        'pointer-events:none',
+        'z-index:9996',
+        'transform:translate(-50%,-50%)',
+        'transition:opacity 0.4s',
+        'opacity:0',
+        'will-change:transform'
+    ].join(';');
+    document.body.appendChild(glow);
+    var mx = 0, my = 0, gx = 0, gy = 0;
+    document.addEventListener('mousemove', function(e) {
+        mx = e.clientX; my = e.clientY;
+        glow.style.opacity = '1';
+    }, { passive: true });
+    document.addEventListener('mouseleave', function() {
+        glow.style.opacity = '0';
+    });
+    (function animG() {
+        gx += (mx - gx) * 0.07;
+        gy += (my - gy) * 0.07;
+        glow.style.left = gx + 'px';
+        glow.style.top = gy + 'px';
+        requestAnimationFrame(animG);
+    })();
+}
+
+// ── MAGNETIC BUTTONS
+document.querySelectorAll('.btn-gold, .nav-cta').forEach(function(btn) {
+    if ('ontouchstart' in window) return;
+    btn.addEventListener('mousemove', function(e) {
+        var r = btn.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width / 2) * 0.1;
+        var y = (e.clientY - r.top - r.height / 2) * 0.1;
+        btn.style.transform = 'translate(' + x + 'px,' + y + 'px) translateY(-3px)';
+    });
+    btn.addEventListener('mouseleave', function() {
+        btn.style.transform = '';
+    });
+});
+
+// ── PAGE TRANSITION
+document.querySelectorAll('a[href]').forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (href && !href.startsWith('#') && !href.startsWith('http') &&
+        !href.startsWith('mailto') && !href.startsWith('tel') &&
+        !href.startsWith('https://wa') && href.endsWith('.html')) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.style.opacity = '0';
+            document.body.style.transform = 'translateY(-6px)';
+            document.body.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
+            setTimeout(function() { window.location.href = href; }, 280);
+        });
+    }
+});
+
+// ── STAGGER GRID CHILDREN
+['why-grid', 'svc-grid', 'testi-grid', 'stats-grid', 'pt-grid', 'services-grid'].forEach(function(cls) {
+    var grid = document.querySelector('.' + cls);
+    if (!grid) return;
+    Array.from(grid.children).forEach(function(child, i) {
+        child.classList.add('reveal');
+        child.style.transitionDelay = (i * 0.07) + 's';
+        revealObs.observe(child);
+    });
+});
+
+// ── CONSOLE SIGNATURE
+console.log(
+    '%c\n ✦ AROKELIX ✦\n Where craft meets digital excellence.\n Built from Africa — for the world.\n hello@arokelix.com\n',
+    'color:#E5AB18;font-family:monospace;font-size:13px;background:#04050A;padding:16px;border-left:3px solid #C9940A;'
+);
