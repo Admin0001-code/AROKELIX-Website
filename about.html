@@ -3,73 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — AROKELIX</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>About AROKELIX — Brand Design Studio Founded in Nairobi, Kenya</title>
+    <meta name="description" content="AROKELIX was founded by Aron Muiyionko — Software Development graduate and creative director building a world-class studio from Nairobi, Kenya.">
+    <meta property="og:title" content="About AROKELIX">
+    <meta property="og:url" content="https://arokelix.com/about.html">
+    <link rel="canonical" href="https://arokelix.com/about.html">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="mobile-menu" id="mobileMenu">
+<div class="scroll-progress" id="scrollProgress"></div>
+<button class="back-to-top" id="backToTop">↑</button>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<nav id="nav">
+    <a href="index.html" class="nav-logo">AROKE<span class="gold">L</span>IX</a>
+    <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" aria-current="page">About</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Get In Touch</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
 
-    <nav id="nav">
-        <a href="index.html" class="nav-logo">
-            AROKE<span class="gold">L</span>IX
-        </a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html" class="nav-cta">Get In Touch</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <p class="hero-eyebrow">Our Story</p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Our Story</p>
         <h1 class="page-title">Built From Africa.<br>Built For The World.</h1>
-        <p class="page-intro">AROKELIX was born from a singular conviction — that the most powerful creative and technical work comes from those who are both anointed and appointed to do it.</p>
-    </section>
+        <p class="page-intro">AROKELIX was born from a conviction that the most powerful creative work comes from those who are both anointed and appointed to do it.</p>
+    </div>
+</section>
 
-    <!-- FOUNDER -->
-    <section class="founder">
-        <div class="founder-content">
-            <p class="section-eyebrow">Founder & Creative Director</p>
-            <h2 class="founder-name">Aron Muiyionko</h2>
-            <p class="founder-title">Design · Development · Marketing · Strategy</p>
-            <p class="founder-bio">A Software Development graduate with a God-given vision to build a worldwide creative studio from Africa. Aron brings together design precision, technical depth, and marketing intelligence — a rare combination that gives AROKELIX its unfair advantage in every market.</p>
-            <div class="founder-skills">
-                <span class="skill-tag">Brand Design</span>
-                <span class="skill-tag">Web Development</span>
-                <span class="skill-tag">Social Media</span>
-                <span class="skill-tag">Marketing</span>
-                <span class="skill-tag">UI/UX</span>
-                <span class="skill-tag">Strategy</span>
-                <span class="skill-tag">Software Dev</span>
+<!-- FOUNDER -->
+<section class="founder-section">
+    <div class="container">
+        <p class="eyebrow">Founder & Creative Director</p>
+        <div class="founder-grid">
+            <div class="founder-left">
+                <span class="founder-name">Aron Muiyionko</span>
+                <span class="founder-role">Founder · Designer · Developer · Strategist</span>
+                <p class="founder-bio">A Software Development graduate with a God-given vision to build a worldwide creative studio from Nairobi, Kenya. Aron brings together design precision, technical depth and marketing intelligence — a rare combination that gives AROKELIX its unfair advantage in every market.</p>
+                <p class="founder-bio">Every project is handled personally. The person you speak to is the person who builds your brand. No outsourcing. No interns. Senior execution — always.</p>
+                <div class="founder-skills">
+                    <span class="skill-tag">Brand Design</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Social Media</span>
+                    <span class="skill-tag">Marketing</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Strategy</span>
+                    <span class="skill-tag">Software Dev</span>
+                </div>
+                <blockquote class="founder-verse">"Separate Aaron and his sons from the Israelites, and anoint them so they may serve me as priests." — Exodus 28:1</blockquote>
             </div>
-            <div class="founder-verse">"Separate Aaron and his sons from the Israelites, and anoint them so they may serve me as priests." — Exodus 28:1</div>
+            <div class="founder-right">
+                <div class="founder-img-placeholder">
+                    <span>AM</span>
+                    <span>Add your photo here</span>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- MISSION -->
-    <section class="mission">
+<!-- MISSION -->
+<section class="mission">
+    <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Our Mission</p>
+            <h2 class="section-h2 light">What We Stand For</h2>
+        </div>
         <div class="mission-inner">
-            <div class="mission-left">
-                <p class="section-eyebrow">Our Mission</p>
-                <h2 class="section-title" style="color:var(--ivory);">What We<br>Stand For</h2>
-            </div>
-            <div class="mission-right">
+            <div>
                 <div class="mission-item">
                     <div class="mission-num">I</div>
                     <div class="mission-text">
@@ -81,96 +101,120 @@
                     <div class="mission-num">II</div>
                     <div class="mission-text">
                         <h4>Global Standard</h4>
-                        <p>Every client — whether in Nairobi or New York — receives the same world-class quality. Geography is not an excuse.</p>
+                        <p>Every client — whether in Nairobi or New York — receives the same world-class quality. Geography is never an excuse for mediocrity.</p>
                     </div>
                 </div>
                 <div class="mission-item">
                     <div class="mission-num">III</div>
                     <div class="mission-text">
                         <h4>Royal Legacy</h4>
-                        <p>We build for generations. Every project is a brick in a structure that will outlast its creator. Legacy over virality.</p>
+                        <p>We build for generations. Every project is a brick in a structure that will outlast its creator. Legacy over virality. Always.</p>
                     </div>
                 </div>
             </div>
+            <div>
+                <div style="background:var(--dark2);border:1px solid var(--bdg);padding:var(--s6);">
+                    <p class="eyebrow">Our Tagline</p>
+                    <h3 style="font-family:var(--fh);font-size:32px;letter-spacing:0.06em;color:var(--ivory);line-height:1.1;margin-bottom:var(--s3);">Where Craft Meets<br><span class="gold-text">Digital Excellence</span></h3>
+                    <p style="font-size:14px;color:var(--gray1);line-height:1.8;margin-bottom:var(--s4);">We don't just build websites and brands. We engineer digital experiences that command attention, build trust and drive real business results for clients across Africa and the world.</p>
+                    <a href="contact.html" class="btn-gold" style="display:inline-flex;">Start Your Project →</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- BIBLICAL -->
-    <section class="biblical">
-        <p class="section-eyebrow">The Name Behind The Brand</p>
-        <h2 class="section-title" style="color:var(--ivory);margin-bottom:56px;">Every Syllable<br>Carries Scripture</h2>
+<!-- BIBLICAL -->
+<section class="biblical">
+    <div class="container">
+        <div class="section-header center">
+            <p class="eyebrow center">The Name Behind The Brand</p>
+            <h2 class="section-h2 light">Every Syllable<br>Carries Scripture</h2>
+        </div>
         <div class="biblical-grid">
             <div class="biblical-block">
-                <div class="bib-part">ARON</div>
-                <div class="bib-root">Hebrew — Aaron · אַהֲרֹן</div>
+                <span class="bib-part">ARON</span>
+                <span class="bib-root">Hebrew — Aaron · אַהֲרֹן</span>
                 <p class="bib-meaning">High Priest of Israel. Brother of Moses. Mountain of strength, exalted, enlightened one. Numbers 17:8 · Exodus 28</p>
             </div>
             <div class="biblical-block">
-                <div class="bib-part">EL</div>
-                <div class="bib-root">Hebrew — Elohim · אֱלֹהִים</div>
-                <p class="bib-meaning">God Almighty. The first name of God in all Scripture. Appears 2,570 times. Genesis 1:1</p>
+                <span class="bib-part">EL</span>
+                <span class="bib-root">Hebrew — Elohim · אֱלֹהִים</span>
+                <p class="bib-meaning">God Almighty. The first name of God in all Scripture. Appears 2,570 times in the Bible. Genesis 1:1</p>
             </div>
             <div class="biblical-block">
-                <div class="bib-part">IX</div>
-                <div class="bib-root">Latin Royal Suffix</div>
-                <p class="bib-meaning">Sovereign mastery and divine completion. The mark of kings and commanders. Galatians 5:22</p>
+                <span class="bib-part">IX</span>
+                <span class="bib-root">Latin Royal Suffix</span>
+                <p class="bib-meaning">Sovereign mastery and divine completion. The mark of kings, commanders, and authority. Galatians 5:22</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA -->
-    <section class="about-cta">
-        <p class="hero-eyebrow">Work With Us</p>
-        <h2 class="page-title" style="color:var(--dark-text);">Ready To Build<br>Something Eternal?</h2>
-        <div class="hero-buttons" style="justify-content:center;margin-top:32px;">
-            <a href="contact.html" class="btn-primary">Start a Project</a>
-            <a href="services.html" class="btn-dark">View Services</a>
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container">
+        <div class="section-header center">
+            <p class="eyebrow center">Work With Us</p>
+            <h2 class="section-h2">Ready To Build<br>Something Eternal?</h2>
+            <p class="section-p center" style="margin-bottom:var(--s5);">Your worldwide brand starts with one conversation. Free consultation. No commitment.</p>
         </div>
-    </section>
+        <div class="about-cta-btns">
+            <a href="contact.html" class="btn-gold">Start a Project →</a>
+            <a href="services.html" class="btn-dark-outline">View Services</a>
+        </div>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <div class="footer-logo">AROKE<span class="gold">L</span>IX</div>
-                <p class="footer-tagline">Anointed to Build. Appointed to Lead.</p>
-                <p class="footer-verse">✦ Exodus 28:1 · Genesis 1:1</p>
-            </div>
-            <div class="footer-col">
-                <h4>Pages</h4>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <a href="services.html">Brand Identity</a>
-                <a href="services.html">Web Development</a>
-                <a href="services.html">Social Media</a>
-                <a href="services.html">Marketing</a>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter / X</a>
-                <a href="contact.html">hello@arokelix.com</a>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <div class="footer-logo">AROKE<span class="gold">L</span>IX</div>
+            <p class="footer-tagline">Where craft meets digital excellence. Built from Africa — for the world.</p>
+            <p class="footer-verse">✦ Anointed to Build. Appointed to Lead.</p>
+            <div class="footer-socials">
+                <a href="#">in</a><a href="#">ig</a><a href="#">tw</a><a href="#">be</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-copy">© 2025 AROKELIX. All rights reserved.</div>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
-            </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </footer>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <a href="services.html">Brand Identity</a>
+            <a href="services.html">Web Development</a>
+            <a href="services.html">Social Media</a>
+            <a href="services.html">Marketing</a>
+            <a href="services.html">Strategy</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:hello@arokelix.com">hello@arokelix.com</a>
+            <a href="https://wa.me/254745851594">+254 745 851 594</a>
+            <a href="contact.html">Start a Project</a>
+            <div class="footer-location"><p>Nairobi, Kenya</p><p>Serving clients worldwide</p></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-copy">© 2025 AROKELIX. All rights reserved.</p>
+        <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+    </div>
+</footer>
 
-    <a href="https://wa.me/254745851594?text=Hi%20AROKELIX!"
-        class="whatsapp-btn" target="_blank">💬</a>
+<a href="https://wa.me/254745851594?text=Hi%20AROKELIX!" class="wa-btn" target="_blank" rel="noopener">
+    <span class="wa-emoji">💬</span>
+    <span class="wa-text">Chat With Us</span>
+</a>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
